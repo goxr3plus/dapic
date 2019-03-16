@@ -10,7 +10,8 @@ Intralot Dapic
 # How to set up
 
 Install XAMPP and start MYSQL locally and then modify the [application.properties](https://github.com/goxr3plus/dapic/blob/master/src/main/resources/application.properties)
-For example i did it as below:
+
+For example i did it as shown below:
 
 ```XML
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
