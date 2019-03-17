@@ -6,14 +6,21 @@ Intralot Dapic
 
 1) One that returns all available settings at (/api/settings)
 2) One that returns a specific setting        (/api/settings/id)
-3) Call a stored database procedure named `test` (/api/a)
+3) Call a stored database procedure named `test` (/api/setting/id)
+http://localhost:9999/api/setting/0
+
+Example Image
+
+
 
 ```java
-CREATE DEFINER=`root`@`localhost` PROCEDURE `dapic`.`test` (IN value INT,OUT ending_value INT)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `dapic`.`test` (IN id INT,OUT endingResult boolean)
 DETERMINISTIC
  begin
-  DECLARE total_value INT;
-  SET ending_value = value *2;
+	 SET endingResult = false;
+	 if id > 0 then
+      SET endingResult = true;
+     END IF;
  END;
 ```
 
