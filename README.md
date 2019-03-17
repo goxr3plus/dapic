@@ -25,7 +25,7 @@ Install XAMPP and start MYSQL locally and then modify the [application.propertie
 
 For example i did it as shown below:
 
-```XML
+```java
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 spring.datasource.url = jdbc:mysql://localhost:3306/dapic?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
 spring.datasource.username = root
