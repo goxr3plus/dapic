@@ -12,10 +12,8 @@ Intralot Dapic
 CREATE DEFINER=`root`@`localhost` PROCEDURE `dapic`.`test` (IN value INT,OUT ending_value INT)
 DETERMINISTIC
  begin
-	 DECLARE total_value INT;
-
-
-   SET ending_value = value *2;
+  DECLARE total_value INT;
+  SET ending_value = value *2;
  END;
 ```
 
