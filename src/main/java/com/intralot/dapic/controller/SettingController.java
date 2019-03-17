@@ -20,12 +20,18 @@ public class SettingController {
     SettingRepository settingRepository;
 
     @GetMapping("/settings")
-    public List<Setting> getAllNotes() {
+    public List<Setting> getAllSettings() {
         return settingRepository.findAll();
     }
 
+
+    @GetMapping("/a")
+    public int getAllNotes() {
+        return settingRepository.getDouble(50);
+    }
+
     @GetMapping("/settings/{id}")
-    public Setting getNoteById(@PathVariable(value = "id") Long settingId) {
+    public Setting getSettingsById(@PathVariable(value = "id") Long settingId) {
         return settingRepository.findById(settingId)
                 .orElseThrow(() -> new ResourceNotFoundException("Settings", "id", settingId));
     }

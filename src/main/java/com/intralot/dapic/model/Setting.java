@@ -11,17 +11,15 @@ import java.util.Date;
 
 
 @Entity
-@Table(name = "notes")
+@Table(name = "settings")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"},
         allowGetters = true)
 public class Setting {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank
-    private String title;
 
     @NotBlank
     private String content;
@@ -42,14 +40,6 @@ public class Setting {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getContent() {
