@@ -25,9 +25,9 @@ public class SettingController {
     }
 
 
-    @GetMapping("/a")
-    public int getAllNotes() {
-        return settingRepository.getDouble(50);
+    @GetMapping("/setting/{id}")
+    public boolean getAllNotes(@PathVariable(value = "id") int settingId) {
+        return settingRepository.getSetting(settingId);
     }
 
     @GetMapping("/settings/{id}")

@@ -11,5 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface SettingRepository extends JpaRepository<Setting, Long> {
 
     @Procedure(procedureName = "test")
-    int getDouble(@Param("value") int personId);
+    boolean getSetting(@Param("value") int personId);
 }
