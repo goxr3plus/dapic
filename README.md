@@ -5,8 +5,8 @@ Intralot Dapic
 # It contains below endpoints
 
 1) One that returns all available settings at (/api/settings)
-2) One that returns a specific setting        (/api/settings/id)
-3) Call a stored database procedure named `test` (/api/setting/id)
+2) One that returns a specific setting        (/api/settings/{id})
+3) Call a stored database procedure named `test` (/api/setting/{id})
 http://localhost:9999/api/setting/0
 
 ![chrome_2019-03-17_02-35-15](https://user-images.githubusercontent.com/20374208/54483536-5f53da00-485d-11e9-8764-a432cc303e8c.png)
